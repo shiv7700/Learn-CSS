@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            height: 150px ;
+            width: 600px ;
+            background-color: red;
+
+        }
+        #box2{
+            background-color: chocolate;
+            height: 150px ;
+            width: 600px ;
+            padding: 50px;
+            border: 10px solid black;
+            /* box-sizing: content-box; default value */
+            box-sizing: border-box;
+        }
+        #property{
+            color: darkkhaki;
+        }
+        #pro-color{
+            color: brown;
+        }
+        #initial{
+            color: initial;
+
+        }
+        #inherit{
+            color: inherit;
+        }
+        .fit-object{
+            border: 3px solid red;
+            height: 500px ;
+            width: 400px;
+            object-fit: cover;
+            object-position: top center;
+
+        }
+        /* for pseudo class */
+        li:last-child{
+            color: brown;
+        }
+        li:first-child{
+            color: blue;
+        }
+        li:nth-child(3){
+            color: blue;
+        }
+        .focus:focus{
+            border: 5px solid red;
+            color: darkblue;
+        }
+        .pseudo-element::first-letter{
+            font-size: 30px;
+            color: red;
+        }
+        .pseudo-element::first-line{
+            font-size: 45px;
+            color: darkgreen;
+        }
+        #before-after::before{
+            content: url(./images/arrow.png);
+
+
+        }
+        #before-after::after{
+            content: " Added using after pseudo eleemnt";
+
+        }
+        .pseudo-element::selection{
+            background-color: lightcoral;
+            color: red;
+        }
+        .display-property-1{
+            height: 200px;
+            width: 500px;
+            color: brown;
+            font-size: 35px;
+            border: 4px solid red;
+            display: block;
+        }
+        .display-property-2{
+            display: inline;
+            /* height: 100px; */
+            border: 4px solid red;
+            font-size: 35px;
+            
+        }
+        .display-property-3{
+            height: 200px;
+            width: 500px;
+            color: brown;
+            font-size: 35px;
+            border: 4px solid red;
+            display: inline-block;
+
+        }
+        .display-property-4{
+            display: none;
+        }
+        #parent-position{
+            border: 2px solid red;
+            padding: 20px;
+            width: 50%;
+
+        }
+        #relative-position{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            display: inline-block;
+            position: relative;
+            top : 20px;
+            right: 20px;
+            left: 30px;
+
+        }
+        #fixed-position{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(193, 169, 12);
+            display: inline-block;
+            position: absolute;
+            
+        }
+        #absolute-position{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(15, 241, 7);
+            display: inline-block;
+            
+        }
+        #fixed{
+            border-radius: 90%;
+            height: 200px;
+            width: 200px;
+            background-color: rgb(171, 227, 124);
+            position: fixed;
+            top: 555px;
+            bottom: 0px;
+            left: 1200px;
+            right: 0px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>CSS box sizing</h2>
+
+    <div id="box1">box1</div>
+    <hr>
+    <div id="box2">box2</div>
+
+
+    <h2>Initial vs Inherit</h2>
+
+    <div id="property">
+        Color text <br>
+        <a id="pro-color" href="">Link 1</a> <br>
+        <a id="initial" href="">Link 2</a> <br>
+        <a id="inherit" href="">Link 3</a> <br>
+    </div>
+
+    <h2>Object fit property</h2>
+
+    <img class="fit-object" src="./images/img3.jpg" alt="">
+
+
+    <h2>pseudo class</h2>
+
+    <h2>nth-child pseudo class</h2>
+    <ul>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+    </ul>
+
+    <h2>focus pseudo class</h2>
+
+    <input class="focus" type="search" name="" id="">
+
+    <h2 id="before-after">pseudo element</h2>
+
+    <p class="pseudo-element" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quae minima nisi cum! Quia, at dignissimos labore, facilis placeat atque vel voluptas odio explicabo aut hic reiciendis dolore tempore, iure eum velit? Tenetur harum voluptas animi modi nostrum numquam qui inventore officiis vero quae repudiandae magnam reiciendis quisquam debitis voluptates, cupiditate sunt ab praesentium. Quaerat, molestiae laborum quos dicta, tempora cum excepturi aperiam molestias harum nostrum consequatur recusandae praesentium? Enim aliquam officia perferendis ad, esse aperiam incidunt non eligendi consequuntur ratione. Voluptas quasi quisquam ipsam odit, asperiores voluptates doloribus? Ipsum temporibus debitis voluptate nemo sit repudiandae quibusdam sed quisquam aspernatur. Maxime temporibus explicabo ipsa cupiditate natus sint quos facere animi quo magni atque quaerat, dicta dolor similique ut aliquid, vitae excepturi ullam distinctio nemo voluptatem? Doloremque deleniti illum corrupti necessitatibus repellat rem maiores porro facilis quam aut recusandae accusamus quasi debitis at aperiam, odit harum aliquid fuga! Ea pariatur quo, ipsa eum in veniam officia quia distinctio qui aperiam iure hic dolore voluptatum nam beatae consectetur ipsum. Consequuntur, quaerat totam tempore deleniti animi ad consequatur blanditiis obcaecati, repellat quidem beatae recusandae qui provident numquam vero. Suscipit blanditiis eius consectetur odio dignissimos quia alias quam ex natus quidem, quos, aperiam sit culpa sequi velit qui molestiae soluta ab quae consequuntur est! Aliquam laborum deserunt rem tempore neque corrupti enim odit exercitationem ipsam perspiciatis voluptate totam, dolor, consequuntur asperiores quaerat sunt. Libero quis nostrum placeat accusamus rerum? Quod, recusandae eum! Cumque dolores in maiores repellat praesentium? Rerum fugit amet reiciendis iste ratione, culpa deleniti recusandae sapiente, nulla qui sint reprehenderit fugiat suscipit. Quidem nesciunt non voluptate laudantium soluta quam, officia eaque tempore similique asperiores, saepe velit doloribus? Nesciunt dolor recusandae optio architecto, temporibus sed reiciendis ipsum dolorum assumenda iste delectus dignissimos aliquid accusamus voluptatibus aut nulla laboriosam non repellat odio animi tenetur mollitia soluta. Nulla commodi maiores nisi expedita perferendis, dolores autem nesciunt repudiandae ullam consectetur quasi, placeat est modi vel! Beatae exercitationem odit eaque cumque sapiente excepturi atque asperiores omnis deserunt, quisquam odio! Debitis fuga perferendis nesciunt et ex laborum tempora ipsam quia porro reiciendis hic dolor officiis culpa, quas velit, libero saepe. Consequuntur veniam quaerat, rerum beatae nihil, totam magni veritatis aliquam quae accusamus sapiente eius distinctio aut amet, ab eveniet repellat! Error commodi accusamus vero, perspiciatis ducimus maxime eos incidunt repellendus mollitia doloremque molestiae, alias quos dolorum voluptatibus pariatur necessitatibus atque dolores unde voluptas provident eligendi dicta numquam? Quis maiores sed reprehenderit eos tenetur sunt, quidem accusantium molestiae excepturi, necessitatibus doloremque, nulla consectetur! Consectetur, officia totam? Nostrum a consequatur officia perspiciatis in quibusdam mollitia earum adipisci labore repudiandae placeat, possimus iusto magni fugiat debitis! Suscipit, nihil officiis! Totam repudiandae, qui doloremque facere voluptatibus id eos doloribus non voluptatum tenetur quis expedita hic quasi provident exercitationem iure ipsa molestiae incidunt blanditiis maiores adipisci repellat excepturi. Odio nemo, repudiandae suscipit nesciunt hic consequuntur cumque quos voluptatem nobis id, sunt cupiditate sint! Dolores, nostrum tenetur rem delectus ea iure pariatur! Atque veritatis labore alias dolorum omnis magni soluta aspernatur nemo consectetur, facere voluptas ipsum illum. Voluptatem consequatur, consectetur aut ea necessitatibus incidunt architecto doloremque veniam aliquam numquam ullam quae. Aliquid nesciunt inventore perspiciatis illum quibusdam earum nulla doloremque repellendus ipsum eum aut repudiandae tempore excepturi cupiditate harum, consequatur mollitia, error in nemo quae quod dolorem. Illo, corrupti fugit distinctio velit odit itaque ad in impedit nulla harum sunt, tempora magnam? Eaque nam, in ipsum qui aspernatur cum quo enim praesentium ad illo quam distinctio, ab odit ratione illum autem recusandae repudiandae animi harum ducimus ea assumenda maiores nesciunt quidem. Fugit dolores repudiandae doloremque non voluptates quam cupiditate assumenda nihil officia! Cumque, possimus natus ea blanditiis dolorum et adipisci fugiat illum aliquid enim. Reprehenderit, repudiandae soluta dolor eveniet ad minima repellendus animi. Eaque debitis totam, dolorum corporis quos magnam iusto nobis, quisquam perspiciatis maiores iure, a accusantium animi ducimus culpa reiciendis exercitationem enim. Quod sed officia repudiandae maiores, ex tempore vel corporis accusantium dolorum perferendis blanditiis inventore ratione, nesciunt deleniti. Quod laboriosam facere alias aspernatur est? Obcaecati ipsa consequatur consectetur, voluptatem fuga dolor iste veritatis pariatur, commodi doloribus porro inventore modi aspernatur at quaerat assumenda consequuntur dolorem natus sunt dignissimos aperiam, repellat quibusdam. Magni aspernatur fugit neque eum nemo quia ea. Iste, odio!</p>
+
+
+    <h2>CSS display</h2>
+
+    <!-- for display block property  -->
+
+    <div class="display-property-1" >
+        this is a div for block 1
+    </div>
+
+    <div class="display-property-1"> this is a div block 2</div>
+
+    <hr>
+
+    <!-- for display inline proeprty  -->
+
+    <div class="display-property-2" >
+        this is a div for block 1
+    </div>
+
+    <div class="display-property-2"> this is a div block 2</div>
+
+    <hr>
+
+    <!-- for display inline block  -->
+
+    <div class="display-property-3" >
+        this is a div for block 1
+    </div>
+
+    <div class="display-property-3"> this is a div block 2</div>
+
+
+    <!-- for display none  -->
+
+    <div class="display-property-4" > this div is hidden </div>
+
+    <h2>display none vs visibility hidden</h2>
+
+    <p>display none removes while visbility only remove it from visible but was still there</p>
+
+    <h2>CSS position</h2>
+    <p>there are 4 css position properties as static (default) , relative , fixed and absolute. <br> to use top bottom left right css postion must be relative , fixed and absolute .</p>
+
+    <div id="parent-position">
+        <div id="relative-position"></div>
+        <div id="fixed-position"></div>
+        <div id="absolute-position"></div>
+    </div>
+
+    <h2>for fiexd position</h2>
+    <div id="fixed"></div>
+
+    
+
+    
+</body>
+</html>

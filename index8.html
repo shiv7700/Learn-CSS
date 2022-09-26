@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent-layout{
+            padding: 20px;
+            width: 50%;
+            margin: 100px;
+            position: relative;
+        }
+        #layout-1{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            display: inline-block;
+            position: relative;
+            z-index: 5;
+
+        }
+        #layout-2{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(206, 237, 10);
+            display: inline-block;
+            position: relative;
+            top: 50px;
+            left: -50px;
+            z-index: 10;
+        }
+        #layout-3{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(205, 20, 20);
+            display: inline-block;
+            position: relative;
+            top: 100px;
+            left : -100px;
+            z-index: 20;
+        }
+        .image-for-float{
+            height: auto;
+            width: 100px ;
+            float: right;
+        }
+        #nav{
+            list-style-type: none;
+            background-color: aqua;
+            overflow: auto;
+        }
+        li{
+            color: white;
+            padding: 5px 10px;
+            float: left;
+        }
+        #para-float{
+            border: 3px solid red;
+            overflow: auto;
+        }
+        #image-float{
+            height: 200px;
+            width: 200px;
+            float: right;
+        }
+        /* use clear :right or left or both */
+        #experiment-1{
+            background-color: blue ;
+            width: 70% ;
+            height: 200px;
+            float: left;
+
+        }
+        #experiment-2{
+            background-color: violet ;
+            width: 30% ;
+            height: 150px;
+            float: left;
+
+        }
+        #footer{
+            background-color: aqua;
+            clear: both;
+            
+        }
+        #wrapper{
+            padding: 20px;
+            margin: 10px;
+            
+        }
+        #button-link{
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: blanchedalmond;
+            color: darkblue;
+            display: inline-block;
+            /* transform: translate(50px,50px); */
+            /* transform: skew(20deg); */
+        }
+        /* for transform proeprties  */
+        #button-link:hover{
+            display: inline-block;
+            /* transform: translate(50px,50px); */
+            /* transform: rotate(120deg); */
+            transform: scaleX(5);
+            transform: scaleY(5);
+            /* transform-origin: 0%; */
+        }
+        #cover{
+            border: 3px solid red ;
+            height: 200px;
+            width: 200px;
+            margin: 100px ;
+        }
+        #content{
+            height: 200px;
+            width: 200px;
+            background-color: lightblue;
+            /* transform: perspective(300px) rotate3d(0,0,0,20deg)  */
+            transform: perspective(300px) translate3d(60px,100px,50px)
+        }
+        #transition{
+            height: 100px;
+            width: 100px;
+            background-color: blueviolet;
+            margin: 100px;
+            transition-property: width;
+            transition-duration: 1s;
+            transition-property: width , background-color;
+            /* transition-delay: 5s; */
+            transition-timing-function: step-end;
+
+            /* transition shorthand  */
+            /* transition: proeprty , duration , time-function , delay; */
+        }
+        #transition:hover{
+            width: 200px;
+            background-color: black;
+        }
+        @keyframes changecolor{
+            0% { background-color: red; }
+            25% { background-color: rgb(43, 226, 168); }
+            50% { background-color: rgb(183, 226, 43); }
+            75% { background-color: rgb(226, 162, 43); }
+            100% { background-color: rgb(43, 226, 131); }
+
+        }
+        
+
+        #animation{
+            background-color: red ;
+            height: 200px ;
+            width: 200px ;
+            margin: 100px;
+            animation-name : changecolor;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            /* animation-iteration-count: infinite; */
+            animation-iteration-count: 3;
+
+        }
+
+        #animation-2{
+            background-color: red ;
+            height: 200px ;
+            width: 200px ;
+            margin: 100px;
+            animation-name : changecolor;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            /* animation-iteration-count: infinite; */
+            animation-iteration-count: 3;
+            animation-direction: reverse;
+            animation-timing-function: ease;
+
+        }
+        @keyframes all-animation{
+            0% { background-color: red; border-radius: 0%;  }
+            10% { background-color: rgb(0, 110, 255); border-radius: 10%;  }
+            20% { background-color: rgb(72, 255, 0); border-radius: 20%;  }
+            30% { background-color: rgb(0, 213, 255); border-radius: 30%;  }
+            40% { background-color: rgb(149, 255, 0); border-radius: 40%;  }
+            50% { background-color: rgb(166, 0, 255); border-radius: 50%;  }
+            60% { background-color: rgba(106, 255, 0, 0.533); border-radius: 40%;  }
+            70% { background-color: rgb(123, 0, 255); border-radius: 30%;  }
+            80% { background-color: rgb(255, 0, 115); border-radius: 20%;  }
+            90% { background-color: rgb(51, 255, 0); border-radius: 10%;  }
+            100% { background-color: rgb(221, 0, 255); border-radius: 0%;  }
+
+
+
+        }
+        #all-animation{
+            background-color: darkorchid;
+            height: 300px;
+            width: 300px;
+            animation-name: all-animation;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+        }
+        @media screen{
+            #print-1{
+                font-size: 30px;
+            }
+
+        }
+        @media print{
+            #print-1{
+                font-size: 50px;
+            }
+            img{
+                display: none;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <h2>CSS layout and z-index</h2>
+
+    <div id="parent-layout">
+        <div id="layout-1"></div>
+        <div id="layout-2"></div>
+        <div id="layout-3"></div>
+    </div>
+
+    <hr>
+
+    <h2>float and clear</h2>
+
+    <p> <img class="image-for-float" src="./images/img4.jpg" alt=""> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sequi fugit minus dolorum eaque non corrupti est, quia, et aut voluptatibus? Voluptate vel veritatis voluptatem, iure quidem hic veniam nihil fugiat incidunt pariatur voluptates minima. Esse dolores sapiente, perspiciatis odit odio vitae sit assumenda maiores iste quod error voluptatibus doloribus tempora perferendis culpa labore cupiditate illum et optio nam similique, doloremque omnis voluptates corporis. Aut id repudiandae sunt architecto cumque eum maiores molestiae porro voluptas ipsa aliquid sed, necessitatibus iure quam accusantium fugiat error doloribus quasi exercitationem ipsam. Sequi expedita qui molestiae, fugiat nobis modi fuga beatae sit porro nostrum ut? Voluptates commodi dolor ullam perspiciatis molestias ducimus error sunt soluta consequuntur, magni recusandae dolore debitis, laudantium voluptatum assumenda sapiente, saepe a sit perferendis nobis quisquam odit. Consectetur similique blanditiis <img src="./images/img4.jpg" alt="" class="image-for-float" > enim exercitationem architecto id earum tempora, facilis quidem ea, nam sapiente magni iure animi voluptate nostrum corporis distinctio quo dignissimos accusantium magnam culpa. Deleniti eius ad facilis iste natus id tempora quae earum, asperiores dicta minima sunt, facere quibusdam cumque odit cupiditate eum totam aut tenetur, commodi inventore dignissimos doloribus maiores? Impedit iusto, natus culpa distinctio aliquam sapiente. Sed asperiores qui amet ut, temporibus animi tempora obcaecati illo quaerat odit.</p>
+    
+
+    <h2>Navgation bar</h2>
+
+    <ul id="nav">
+        <li>Home</li>
+        <li>About us</li>
+        <li>Our Team</li>
+        <li>Donate</li>
+        <li>More</li>
+    </ul>
+
+
+    <p id="para-float">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam facere repellat nam perferendis nemo odit possimus nihil doloremque, nisi quod dignissimos. Maiores tempora, molestias eveniet iure consectetur adipisci culpa dolor delectus fugiat sint vitae debitis quae deleniti libero provident aliquam autem <img src="./images/img4.jpg" id="image-float" alt=""> quasi laudantium. Repudiandae illo suscipit maiores cum ratione earum sed sunt adipisci itaque minima expedita assumenda amet, hic mollitia enim reiciendis, modi eligendi accusantium et nemo, soluta id ex quo. Iusto laudantium earum minus ea natus a cupiditate dolor numquam, tempore amet impedit distinctio necessitatibus, similique sint nobis eligendi. Fugiat, minus commodi qui debitis sit quasi unde! Deleniti nemo minus odit aperiam fugit laudantium libero non velit nulla. Fugiat, autem earum tempore enim accusamus ullam, quam quasi inventore pariatur quibusdam quae natus dignissimos excepturi, totam neque! Cupiditate repudiandae quam illo eveniet minima aperiam aliquam a accusamus, sunt, deleniti vitae suscipit. Quo at libero dicta exercitationem, dolore pariatur laborum repellat nam repellendus reiciendis quasi, nostrum consequuntur laudantium aliquam officiis numquam? Consequatur, labore quas nam consectetur libero veritatis, autem illum exercitationem voluptatem magnam quaerat molestias doloribus facilis quisquam officiis voluptate repudiandae ut odit aliquid eius! Ipsa suscipit velit ad ipsam pariatur eaque deserunt, possimus tenetur, earum labore aut praesentium. Minima odio dignissimos vero laboriosam culpa, consequuntur molestias ullam ipsa est similique iste beatae, dolor sunt! Expedita quo rem inventore consequatur reiciendis explicabo nulla magnam odit aspernatur, voluptatem dolor amet molestiae excepturi cumque doloribus minus, ipsa maiores quia officia soluta autem error ad distinctio labore. Dicta labore minus culpa quidem? Ex?</p>
+
+    <div id="experiment-1"> This is content</div>
+    <div id="experiment-2"> Siderbar</div>
+    <footer id="footer"> Footer</footer>
+
+    <h2>CSS 2D Transform </h2>
+    <p>work on only block or inline-block</p>
+
+    <div id="wrapper">
+        <a href="" id="button-link">Button</a>
+    </div>
+ 
+    <hr>
+
+    <h2>CSS 3D transform</h2>
+
+    <div id="cover">
+        <div id="content"></div>
+    </div>
+
+    <h2>css transition</h2>
+
+    <div id="transition"></div>
+
+    <h2>CSS Animation</h2>
+
+    <div id="animation"></div>
+
+    <hr>
+
+
+    <div id="animation-2"></div>
+
+    <h2>All animation in one div</h2>
+
+    <div id="all-animation"></div>
+
+
+    <h2>print style in css</h2>
+
+    <div id="print">
+        <img src="./images/img4.jpg" alt="">
+        <p id="print-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, beatae dolorem? Nemo sit nisi impedit soluta natus dolorum nesciunt incidunt! Consequuntur iste, recusandae quas repellat ullam incidunt veritatis error mollitia molestiae rem necessitatibus amet doloribus, molestias aliquam obcaecati harum quaerat sunt magnam. Vero laboriosam odio totam. Culpa veritatis placeat obcaecati accusamus mollitia? Consectetur cum ducimus quas facilis inventore vitae maxime repudiandae. Dolor excepturi dolores veritatis minima, quidem pariatur, quaerat repellendus consequuntur sit exercitationem suscipit laboriosam, labore dignissimos aut saepe harum voluptatibus maiores. Neque repellendus quis pariatur quae eligendi itaque vel mollitia nam officiis! Voluptates pariatur porro facilis suscipit adipisci. Assumenda voluptas vitae facilis commodi, enim est libero voluptatibus consequuntur reiciendis obcaecati at animi ea quaerat sunt, unde qui optio odio veritatis velit! Earum id alias, repellat nostrum blanditiis nisi molestias facere totam excepturi perspiciatis neque tenetur distinctio nihil cum optio suscipit, natus modi ea soluta deserunt dolores in ipsa sint! Sapiente, rerum, saepe quo alias illum architecto deserunt necessitatibus id repudiandae, labore hic! Sed doloribus ducimus recusandae necessitatibus iusto non dolorem, tempore eum sapiente at ipsam eveniet itaque saepe obcaecati asperiores cumque tempora. Nisi magni architecto veniam reprehenderit, autem similique corrupti provident quisquam sit ipsam maiores, velit facilis rerum, hic temporibus iste repellendus! Optio, facilis consectetur fugit minima ab excepturi. Amet ullam placeat omnis totam assumenda, at obcaecati quos natus vel harum quis similique maxime officia sequi provident eaque eos, possimus recusandae repellendus soluta quasi ipsa qui! Voluptatibus fugiat quam architecto, maiores provident quisquam, beatae libero odio porro ipsum quod consectetur eum inventore blanditiis praesentium aperiam. Eaque atque consectetur illum? Natus totam dolorem ducimus corrupti pariatur corporis exercitationem quisquam aperiam. Quasi veniam repudiandae dolore libero, hic nemo totam. Iure omnis quidem saepe impedit consectetur vero commodi dolores, odit mollitia dicta totam quas, neque voluptates inventore illum illo enim sed blanditiis corrupti quaerat praesentium suscipit autem non. Quam velit at beatae corrupti porro sapiente illo sunt et. Suscipit reprehenderit quia dolores iusto nulla, magni nobis quis optio quos consectetur, aspernatur quisquam? Delectus id repellat autem, eaque numquam assumenda cupiditate ipsum, recusandae sint atque beatae voluptate aut, ad maxime eos quia in veritatis officiis! Quisquam totam exercitationem molestias libero eaque quas a ipsa inventore. Animi ad totam voluptatum commodi impedit voluptas, accusamus aliquid eos nihil velit, quos rem provident assumenda dolores quod earum. Natus officiis maiores voluptas modi eligendi. Modi doloremque repellat culpa beatae inventore eius, cumque, iste impedit libero quasi eligendi quam. Voluptate, aut maxime, obcaecati modi qui quod est enim sit perferendis reprehenderit earum illum officia quaerat voluptatibus iusto dolores doloribus nihil. Eaque ratione adipisci nulla quae architecto dolor, veniam nemo rem expedita libero, ex consequatur nihil et earum, eos asperiores laboriosam eum? Quaerat quibusdam debitis inventore? Harum eum quos recusandae molestias magni veritatis sed aliquid animi soluta nemo quam sint modi, temporibus, itaque voluptatum aut earum, fuga vel enim illum! Praesentium tempora unde quaerat ipsa laudantium? Eos tempora repudiandae incidunt nostrum sunt error ad blanditiis similique suscipit tenetur distinctio fugiat eaque, debitis quam recusandae facere! Veniam sequi recusandae quidem nisi ipsam omnis! Recusandae culpa laudantium unde quae repellat iste corporis accusantium error, aliquam obcaecati tempora aliquid temporibus cupiditate. Amet earum in rem accusamus, reprehenderit sed, ullam, laudantium omnis non architecto porro voluptatem natus! Dolorem alias cumque atque repudiandae saepe, dolorum quo necessitatibus placeat ratione sunt vitae, ab, explicabo eaque nisi quos quisquam veritatis labore ut perferendis nulla vel expedita officiis ullam. Sunt itaque cupiditate, sit expedita, recusandae eos sed facere nostrum corrupti asperiores dolores esse magnam omnis optio tempora error ipsum ipsam quia architecto. Ab aperiam earum maiores ipsa consectetur. Asperiores aspernatur, quam ipsam tempora eius distinctio blanditiis obcaecati quas corporis reiciendis veritatis culpa commodi optio itaque ab at maiores ducimus repellat facilis suscipit! Quis temporibus ex fugit tempora, doloribus odit veniam tenetur. Quaerat aperiam consequuntur nulla voluptates tempore voluptatibus eum incidunt libero rerum! Alias nostrum accusantium obcaecati et ab. Harum, numquam ea soluta quam dolores blanditiis corporis culpa molestiae fugit, ipsa saepe minima fugiat ipsam officiis? Esse deleniti ab ea? Fugit magnam numquam nam praesentium voluptate nisi voluptatum adipisci sapiente illum sint. Voluptatibus est doloribus libero dolorem perferendis repudiandae laudantium, at nihil necessitatibus. Laborum, soluta cum? Voluptatem, velit cum fugit excepturi perspiciatis corrupti quod vel sunt hic quia distinctio quisquam ex laborum blanditiis temporibus suscipit dolor ducimus praesentium, harum veniam dicta vero iusto veritatis. Ad modi ex natus recusandae eveniet harum, sunt voluptate accusamus iure placeat deleniti sit consequuntur deserunt et voluptatem hic ut vel soluta ipsum quidem dolor asperiores minus eius unde! Pariatur placeat ullam ex veritatis doloribus, quas eius, adipisci laborum est reiciendis deserunt voluptatibus aperiam culpa! Illo, voluptatem saepe possimus ducimus esse aut veniam laudantium voluptate quo facere aspernatur quisquam est vero quasi quia sed. Nihil cumque, autem nam omnis consectetur laboriosam, corrupti ad voluptatum esse repudiandae, vero sit natus ullam delectus laudantium quam distinctio excepturi. Mollitia vitae omnis commodi perspiciatis adipisci ipsa ullam, tempore eaque culpa neque aperiam sunt corporis nobis quibusdam eum praesentium qui itaque deserunt tenetur dolor laboriosam? Dolore velit quod ratione, magni sunt maiores praesentium aut, vel dolor harum autem ad enim ipsam numquam facilis consectetur adipisci rerum obcaecati at cumque sint. Ab minus amet qui optio, aperiam doloribus earum, officiis consequuntur soluta sunt sequi molestiae neque beatae cumque expedita sed veritatis officia quae distinctio consectetur, provident nesciunt totam exercitationem? Laudantium blanditiis veniam inventore deserunt nesciunt consequatur a. Totam, modi dolor. Repellat fugit ea tenetur est quibusdam sunt. Ad voluptate dolor consequatur, commodi expedita voluptatibus laboriosam deserunt omnis quae architecto impedit provident nulla id aspernatur, numquam dolores beatae officiis quisquam ullam pariatur quis facilis ratione optio! Maiores optio dicta quasi dolorum, laboriosam praesentium voluptas, illo odit odio aspernatur mollitia, est ipsa quia soluta ipsam. Assumenda temporibus corporis non aspernatur fugiat totam quis architecto ipsum quia similique facilis eaque sed harum mollitia, veniam dolorem id repudiandae rerum sequi. Neque laborum obcaecati dicta necessitatibus modi deserunt ipsum deleniti velit adipisci? Aut animi iusto ipsam pariatur facilis nisi cupiditate nam magnam dolores voluptates vel distinctio eos vitae doloribus, unde, nesciunt id, quis sapiente quibusdam.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

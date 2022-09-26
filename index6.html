@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cu{
+            border: 3px solid darkred;
+            cursor:cell;
+        }
+        #impt{
+            color: red;
+
+        }
+        #impt{
+            color: blue !important;
+            
+        }
+        #impt{
+            color: green;
+            
+        }
+        #boxshadow{
+            border: 3px solid red;
+            width: 400px;
+            background-color: aqua;
+            margin: 200px;
+            padding: 200px;
+            box-shadow: 20px 20px 10px 5px lightblue;
+            /* box-shadow: x y blurradius thickness color; */
+            /* multiple shadow give - value to change direction if shadow  
+            box-shadow: 20px 20px 10px 5px lightblue , -20px 20px 10px 5px lightblue; */
+        }
+        #opsc{
+            background-color: blue;
+            height: 300px ;
+            width: 600px ;
+            opacity: 0.3;
+        }
+        #opsc-img{
+            height: 400px ;
+            width: 400px ;
+            opacity: 0.5;
+        }
+        #opsc-img:hover{
+            height: 400px ;
+            width: 400px ;
+            opacity: 1.0;
+        }
+        #fit1{
+            filter:brightness(20%)
+        }
+        #spirte{
+            height: 500px ;
+            background-image: url(./images/css-sprites.png);
+            background-repeat: no-repeat;
+            background-position: 0px -1192px;
+            
+        }
+        #graident-linear{
+            height: 600px;
+            border: 3px solid red;
+            /* background-image: linear-gradient(red , blue , orange); */
+            /* background-image: linear-gradient(to top left ,red, blue, green); */
+            background-image: linear-gradient( 120deg , blue,red,green);
+        }
+        #radial-gradient{
+            height: 600px;
+            border: 3px solid red;
+            margin-top: 20%;
+            background-image: radial-gradient(circle, red 10% ,blue 30%,green 50%);
+        }
+        #overflow{
+            background-color: aqua;
+            border: 3ox solid red;
+            width: 500px;
+            height: 300px;
+            /* overflow: visible; default proeprty  */
+            /* overflow: hidden; */
+            overflow: scroll;
+            overflow-x: hidden;
+            /* overflow: auto; */
+
+        }
+        .resize{
+            resize:none;
+            /* resize: both; */
+        }
+        .ul{
+            list-style-type: square;
+            list-style-image: url(./images/arrow.png);
+            list-style-position: inside;
+            
+        }
+        li{
+            border: 3px solid red;
+        }
+        .ol{
+            list-style-type:upper-roman;
+        }
+        #table{
+            border: 3px solid black;
+            border-collapse:collapse;
+            /* border-spacing: 15px; */
+            /* empty-cells: hide; */
+            /* table-layout: auto; */
+        }
+        tr,td,th{
+            border: 3px solid red;
+        }
+        td{
+            height: 30px;
+            padding: 10px;
+            text-align: left;
+            vertical-align: bottom;
+        }
+        caption{
+            caption-side: bottom;
+        }
+        #calc{
+            background-color: teal;
+            height: 200px;
+            width: calc(100% - 200px);
+        }
+        .ar{
+            background-color: blueviolet;
+            padding: 20px 20px;
+            margin: 20px 20px;
+            text-decoration: none;
+        }
+        /* for var function */
+        :root{
+            --background-color:red;
+            --text-color: green; 
+
+        }
+        /* css variable */
+        .var{
+            background-color:  var(--background-color);
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+
+    <h2>css cursor</h2>
+
+    <div id="cu">
+        <p>random text</p>
+    </div>
+
+    <h2>!important css</h2>
+    <p id="impt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum harum similique fuga corrupti ipsum ex officiis repellat repellendus odit possimus!</p>
+
+    <h2>Box Shadow</h2>
+
+    <div id="boxshadow">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit similique ducimus eaque porro necessitatibus at assumenda corrupti suscipit provident quaerat ipsam autem velit culpa!</p>
+    </div>
+
+    <h2>css opacity</h2>
+
+    <div id="opsc"></div>
+    <img id="opsc-img" src="./images/img1.jpg" alt="">
+
+    
+    <h2>filters in css</h2>
+    <img id="fit1" src="./images/img3.jpg" alt="">
+
+    <h2>image spirte</h2>
+
+    <div id="spirte"></div>
+
+    <h2>CSS gradients</h2>
+
+    <h2>Linear gradient</h2>
+
+    <div id="graident-linear"></div>
+
+    <div id="radial-gradient"></div>
+
+
+    <h2>CSS overflow</h2>
+    
+    <div id="overflow">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fuga mollitia neque facilis, ipsa voluptatibus est a necessitatibus ipsam repellat. Praesentium maiores itaque, quis sunt incidunt tempora impedit exercitationem earum et laborum id quaerat a sequi voluptatibus nesciunt fugit? Beatae facere aliquam delectus eaque consectetur quidem magni reprehenderit distinctio vitae? incidunt tempora impedit exercitationem earum et laborum id quaerat a sequi voluptatibus nesciunt fugit? Beatae facere aliquam delectus eaque consectetur quidem magni reprehenderit distinctio vitae? incidunt tempora impedit exercitationem earum et laborum id quaerat a sequi voluptatibus nesciunt fugit? Beatae facere aliquam delectus eaque consectetur quidem magni reprehenderit distinctio vitae? incidunt tempora impedit exercitationem earum et laborum id quaerat a sequi voluptatibus nesciunt fugit? Beatae facere aliquam delectus eaque consectetur quidem magni reprehenderit distinctio vitae? incidunt tempora impedit exercitationem earum et laborum id quaerat a sequi voluptatibus nesciunt fugit? Beatae facere aliquam delectus eaque consectetur quidem magni reprehenderit distinctio vitae? incidunt tempora impedit exercitationem earum et laborum id quaerat a sequi voluptatibus nesciunt fugit? Beatae facere aliquam delectus eaque consectetur quidem magni reprehenderit distinctio vitae? incidunt tempora impedit exercitationem earum et laborum id quaerat a sequi voluptatibus nesciunt fugit? Beatae facere aliquam delectus eaque consectetur quidem magni reprehenderit distinctio vitae?</p>
+    </div>
+    
+
+
+    <h2>CSS resizable</h2>
+
+    <textarea class="resize" name="" id="" cols="30" rows="10"></textarea>
+
+    <h2>CSS lists</h2>
+
+    <ul class="ul">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+<hr>
+
+<ol class="ol">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+</ol>
+
+
+    <h2>CSS table</h2>
+
+    <table id="table">
+        <caption>Table info</caption>
+        <tr>
+            <th>Heading 1</th>
+            <th>Heading 2</th>
+            <th>Heading 3</th>
+        </tr>
+
+        <tr>
+            <td>content 1</td>
+            <td>content 2</td>
+            <td>content 3</td>
+        </tr>
+
+        <tr>
+            <td>content 4</td>
+            <td>content 5</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h2>CSS function</h2>
+    <p>calc function</p>
+
+    <div id="calc"> </div>
+
+    <br> <br>  <br> <br> <br> <br> <hr>
+
+    <a class="ar" href="https://www.google.com">Google</a>
+
+    <p>var() function</p>
+
+    <div class="var" > <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores saepe assumenda, dolor, aliquid asperiores ipsa, facilis maxime quidem itaque nam dicta quos expedita unde sapiente rerum consectetur. Veniam eius deserunt nemo! Eaque cumque deserunt fuga nemo? Nisi quaerat esse ex illum reiciendis mollitia facere incidunt sed consectetur, aut ut nulla!</p></div>
+
+</body>
+</html>
