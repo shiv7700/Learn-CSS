@@ -1,0 +1,91 @@
+Short Notes On CSS FlexBox
+
+Flexible box layout commonly known as flexbox.
+Flexbox is a one-dimensional layout system in which we create row or column axis layout. 
+
+Without using position or float or html5 table layout the flexbox makes responsive layout structure.
+
+1 2 3                                                         
+flex-direction:row;
+
+1
+2
+3
+flex-direction:column;
+
+Flexbox is for small layout while grid is for large layout.
+
+Make a parent container flexible. 
+Parent flexible makes child flexible. 
+
+Different proeprties to define flex :-
+
+display: flex;
+Current Standard
+
+display:  flexbox;
+2011 Version
+
+display:  box;
+2009 Version
+
+Important Properties Of FlexBox :-
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+For Parent
+
+1. flex-direction: Direction in which flex item will be in container
+	values: row,column,row-reverse,column-reverse
+
+2. flex-wrap: Makes flexible item wrap if needed
+	values: wrap,no-wrap,wrap-reverse
+	wrap: multi line flex
+
+3. flex-flow: is a shorthand used for flex-direction flex-wrap
+
+4. justify-content: is use to align flex item (flex child)
+	values: center,left,right,flex-start,flex-end-space-around,space-between
+
+5. align-item: is used to align the flex items
+	values:center,stretch,flex-start,flex-end
+
+6.align-content: is used to align the flex lines
+	values: center,flex-start,flex-end,space-around,space-between
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+For Child
+
+1. Order:  order of the flex items
+	values: 1 ,3 ,4 (deault value is 0)
+
+2. flex-grow: child grow relative to other rest of child items
+	values: 1 , 2 , 3
+
+3. flex-shrink: shrink relative to other rest of child items
+	values: 2,3,4...
+
+4. flex-basis: initial length of item 
+	values : X px
+
+5. flex : shorthand used for flex-gow,flex-shrink,flex-basis
+
+6. align-self: alignment for the selected item inside the flexible container
+	values: center , stretch,flex-start,flex-end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
